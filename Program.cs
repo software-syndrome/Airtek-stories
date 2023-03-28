@@ -15,6 +15,8 @@ foreach (var flight in schedulesOrderedByFlightId)
     Console.WriteLine($"Flight: {flight.FlightId}, departure: {flight.DepartureCityCode}, arrival: {flight.ArrivalCityCode}, day: {flight.DepartureDay}");
 }
 
+
+Console.WriteLine("User Story 2");
 var ordersProvider = new JsonOrderProvider();
 var flightSchedules = schedulesProvider.GetFlightSchedules();
 var shippings = ShippingArranger.Arrange(ordersProvider.GetOrders(), flightSchedules);
