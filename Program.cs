@@ -3,7 +3,6 @@
 using AirtekStories.Flights;
 using AirtekStories.Orders;
 using AirtekStories.Arrangement;
-using System.Linq;
 
 IFlighScheduleProvider schedulesProvider = new PredefinedScheduleProvider();
 
@@ -14,7 +13,6 @@ foreach (var flight in schedulesOrderedByFlightId)
 {
     Console.WriteLine($"Flight: {flight.FlightId}, departure: {flight.DepartureCityCode}, arrival: {flight.ArrivalCityCode}, day: {flight.DepartureDay}");
 }
-
 
 Console.WriteLine("User Story 2");
 var ordersProvider = new JsonOrderProvider();
