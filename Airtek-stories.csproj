@@ -7,5 +7,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
+  <Target Name="AfterBuild">
+    <Copy SourceFiles="$(ProjectDir)/coding-assigment-orders.json" DestinationFolder="$(OutDir)" ContinueOnError="true" />
+  </Target>
 </Project>

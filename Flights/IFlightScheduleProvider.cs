@@ -1,6 +1,6 @@
 
-namespace AirTekSotires.Flights;
+namespace AirtekStories.Flights;
 interface IFlighScheduleProvider
 {
-    FlightSchedule[] Schedules { get; }
+    IEnumerable<FlightSchedule> GetFlightSchedules();
 }

@@ -1,13 +1,10 @@
-using AirTekSotires.Flights;
-
 namespace AirtekStories.Flights;
 
 public class PredefinedScheduleProvider : IFlighScheduleProvider
 {
-    private FlightSchedule[] _predefinedSchedules;
-    public PredefinedScheduleProvider()
+    public IEnumerable<FlightSchedule> GetFlightSchedules()
     {
-        _predefinedSchedules = new FlightSchedule[] {
+        return new FlightSchedule[] {
             new FlightSchedule(){
                     FlightId = 1,
                     DepartureCityCode = "YUL",
@@ -46,6 +43,4 @@ public class PredefinedScheduleProvider : IFlighScheduleProvider
                 }
         };
     }
-
-    public FlightSchedule[] Schedules => _predefinedSchedules;
 }
